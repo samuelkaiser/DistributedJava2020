@@ -124,14 +124,17 @@
     </div>
     </nav>-->
 </header>
-<main class="pos-r t-71-pix l-0-pix m-0-auto h-500-pix w-75-percent" style="margin: 0 auto;">
-    <ul class="list-group" style="margin-top: 85px;">
-        <li class="list-group-item">Cras justo odio <div class="icon-group"><i class="far fa-trash-alt mr-15-pix"></i><i class="fas fa-edit mr-15-pix"></i></div></li>
-        <li class="list-group-item">Dapibus ac facilisis in <div class="icon-group"><i class="far fa-trash-alt mr-15-pix"></i><i class="fas fa-edit mr-15-pix"></i></div></li>
-        <li class="list-group-item">Morbi leo risus<div class="icon-group"><i class="far fa-trash-alt mr-15-pix"></i><i class="fas fa-edit mr-15-pix"></i></div></li>
-        <li class="list-group-item">Porta ac consectetur ac<div class="icon-group"><i class="far fa-trash-alt mr-15-pix"></i><i class="fas fa-edit mr-15-pix"></i></div></li>
-        <li class="list-group-item">Vestibulum at eros<div class="icon-group"><i class="far fa-trash-alt mr-15-pix"></i><i class="fas fa-edit mr-15-pix"></i></div></li>
-    </ul>
+<main class="pos-r t-71-pix l-0-pix m-0-auto h-500-pix w-75-percent " style="margin: 0 auto;">
+    <form id="userLoginForm" style="margin: 0 auto; margin-top: 85px; padding: 25px; text-align:center; border: 1px groove rgba(255,255,255,.8); max-width: 320px; border-radius: 4px;">
+        <legend>Enter your user login details to access your account.</legend>
+        <label for="userNameOrEmail" name="userNameOrEmail">
+            <input type="text" id="userNameOrEmail" value="" placeholder="Username or Email" />
+        </label>
+        <label for="password">
+            <input type="text" id="password" name="password" value="" placeholder="Password" />
+        </label><br>
+        <input type="submit" id="submit" value="Login" />
+    </form>
 </main>
 <footer class="navbar-dark bg-dark top-stack pos-f b-0-pix l-0-pix header-font">
     <div class="container-fluid">
