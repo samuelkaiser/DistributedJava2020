@@ -20,7 +20,9 @@
         $(document).ready(function(){
             // display "Coming Soon" modal window on incomplete routes
             $('.coming-soon').on('click',function(e){
-                alert('Hello human. This component is not yet complete.');
+
+                // alert('Hello human. This component is not yet complete.');
+
             });
         });
     </script>
@@ -72,6 +74,22 @@
             </form>
         </div>
     </nav>
+    <!-- Nav errors -->
+    <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+        <div class="toast" style="position: absolute; top: 10px; right: 10px;">
+            <div class="toast-header">
+                <img src="..." class="rounded mr-2" alt="...">
+                <strong class="mr-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
     <!--<nav class="navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">.NET Web Development 2020</a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#links" aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">

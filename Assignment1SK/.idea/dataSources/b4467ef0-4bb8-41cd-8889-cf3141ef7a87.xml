@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test_derby">
+  <database-model serializer="dbm" rdbms="DERBY" format-version="4.7">
+    <root id="1"/>
+    <schema id="2" parent="1" name="APP"/>
+    <schema id="3" parent="1" name="NULLID"/>
+    <schema id="4" parent="1" name="SAM">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="5" parent="1" name="SQLJ"/>
+    <schema id="6" parent="1" name="SYS"/>
+    <schema id="7" parent="1" name="SYSCAT"/>
+    <schema id="8" parent="1" name="SYSCS_DIAG"/>
+    <schema id="9" parent="1" name="SYSCS_UTIL"/>
+    <schema id="10" parent="1" name="SYSFUN"/>
+    <schema id="11" parent="1" name="SYSIBM"/>
+    <schema id="12" parent="1" name="SYSPROC"/>
+    <schema id="13" parent="1" name="SYSSTAT"/>
+    <table id="14" parent="4" name="CATEGORY"/>
+    <table id="15" parent="4" name="PRODUCTS"/>
+    <table id="16" parent="4" name="USERS"/>
+    <column id="17" parent="14" name="CATEGORY_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="14" name="CATEGORY_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="19" parent="14" name="CATEGORY_DESCRIPTION">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <key id="20" parent="14" name="SQL200205031343570">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CATEGORY_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="15" name="PRODUCT_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="15" name="PRODUCT_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(64)|12</DataType>
+    </column>
+    <column id="23" parent="15" name="CATEGORY_ID">
+      <Position>3</Position>
+      <DataType>INTEGER(10)|4</DataType>
+    </column>
+    <key id="24" parent="15" name="SQL200205031224180">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRODUCT_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="25" parent="15" name="PRODUCTS___FK">
+      <ColNames>CATEGORY_ID</ColNames>
+      <RefSchemaName>SAM</RefSchemaName>
+      <RefTableName>CATEGORY</RefTableName>
+      <RefKeyName>SQL200205031343570</RefKeyName>
+      <RefColNames>CATEGORY_ID</RefColNames>
+    </foreign-key>
+    <column id="26" parent="16" name="USER_ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>AUTOINCREMENT: start 1 increment 1</DefaultExpression>
+    </column>
+    <column id="27" parent="16" name="USER_PASSWORD">
+      <Position>2</Position>
+      <DataType>CHAR(128)|1</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="16" name="USER_FIRST_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(64)|12</DataType>
+    </column>
+    <column id="29" parent="16" name="USER_LAST_NAME">
+      <Position>4</Position>
+      <DataType>VARCHAR(64)|12</DataType>
+    </column>
+    <column id="30" parent="16" name="USER_EMAIL">
+      <Position>5</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <index id="31" parent="16" name="USERS_USER_ID_UINDEX">
+      <ColNames>USER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+  </database-model>
+</dataSource>
